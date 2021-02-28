@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservice-ecosystem.iml" filepath="$PROJECT_DIR$/.idea/microservice-ecosystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-accounting/ms-accounting.iml" filepath="$PROJECT_DIR$/ms-accounting/ms-accounting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-notification/ms-notification.iml" filepath="$PROJECT_DIR$/ms-notification/ms-notification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-order/ms-order.iml" filepath="$PROJECT_DIR$/ms-order/ms-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node-apigateway/node-apigateway.iml" filepath="$PROJECT_DIR$/node-apigateway/node-apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node-configserver/node-configserver.iml" filepath="$PROJECT_DIR$/node-configserver/node-configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/node-discovery/node-discovery.iml" filepath="$PROJECT_DIR$/node-discovery/node-discovery.iml" />
+    </modules>
+  </component>
+</project>
