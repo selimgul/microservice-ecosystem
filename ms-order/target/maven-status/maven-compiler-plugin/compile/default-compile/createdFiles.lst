@@ -1,8 +1,0 @@
-gul\selim\microserviceEcosystem\order\config\OrderConfig.class
-gul\selim\microserviceEcosystem\order\services\PaymentService.class
-gul\selim\microserviceEcosystem\order\models\NotifyRequest.class
-gul\selim\microserviceEcosystem\order\controllers\OrderController.class
-gul\selim\microserviceEcosystem\order\models\Order.class
-gul\selim\microserviceEcosystem\order\listener\SMSResultListener.class
-gul\selim\microserviceEcosystem\order\models\PaymentRequest.class
-gul\selim\microserviceEcosystem\order\OrderApplication.class
