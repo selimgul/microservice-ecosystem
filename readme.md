@@ -7,10 +7,10 @@ Gerçek hayat senaryolarında bu bileşenlerden ApiGateway, Discovery Server ve 
 ***Bileşenler***
 1. ***Discovery Server:*** Yazılan tüm mikro servislerin ve önlerinde duran API Gateway bileşeninin kendilerini kaydettirdikleri ve IP adresleri yerine birbirlerinin isimlerini kullanarak haberleşmelerini sağlayan bileşendir. Web sitelerine IP adresi yazmak yerine domain isimlerini yazarak erişmemizi sağlayan DNS sunuculara benzetebiliriz. </br></br>
 2. ***Config Server:*** Yazdığımız her servisin kendisine ait konfigurasyon dosyası mevcuttur. Ancak onlarca belki yüzlerce mikro servisin bulunduğu gerçek hayat senaryolarında bu dosyalarda yer alan değerleri değiştirmek çok pratik değildir. Bu yüzden genellikle konfigurasyon değerleri merkezi bir yapıdan alınır. Config Server bileşeni konfigurasyon değerlerini okumak için gerekli olan bilgilere sahiptir. Okunacak değerler dosya sistemindeki basit bir dosyada da olabilir, bir versiyon kontrol sisteminde yer alan dosyalar da olabilir. Genellikle Git repo'larında yer alan bir ya da bir kaç dosya ile gerçeklenir.</br></br>
-3. ***API Gateway:*** Bazen mikro servislerimizi doğrudan çağırmak yerine önlerine hem güvenlik hem de yük dengeleme amaçlı olarak bir bileşen yerleştirip istekleri karşılamasını, gerekli güvenlik kontrol ya da benzeri işlemlerden sonra hedef servisi çağırmasını isteriz. Örnek ekosistemimizde API Gateway bileşeni bu amaçla kullanılmaktadır.
-4. ***Order MicroService:*** Örnek ekosistemde istekleri karşılayan ve diğer mikro servisleri senkron ve asenkron yöntemlerle çağıran mikro servistir. 
-5. ***Accounting MicroService:*** Order mikro servisinin RestTemplate kullanarak senkron bi şekilde iletişim kurduğu servistir.
-6. ***Notification MicroService:*** Order mikro servisinin 
+3. ***API Gateway:*** Bazen mikro servislerimizi doğrudan çağırmak yerine önlerine hem güvenlik hem de yük dengeleme amaçlı olarak bir bileşen yerleştirip istekleri karşılamasını, gerekli güvenlik kontrol ya da benzeri işlemlerden sonra hedef servisi çağırmasını isteriz. Örnek ekosistemimizde API Gateway bileşeni bu amaçla kullanılmaktadır.</br></br>
+4. ***Order MicroService:*** Örnek ekosistemde istekleri karşılayan ve diğer mikro servisleri senkron ve asenkron yöntemlerle çağıran mikro servistir. </br></br>
+5. ***Accounting MicroService:*** Order mikro servisinin RestTemplate kullanarak senkron bir şekilde iletişim kurduğu servistir.</br></br>
+6. ***Notification MicroService:*** Order mikro servisinin cloud bus (çalışmada RabbitMQ kullanılmıştır) üzerinden asenkron bir şekilde iletişim kurduğu servistir. </br></br>
 
 ![plot](./resources/ecosystem.jpg)
 
