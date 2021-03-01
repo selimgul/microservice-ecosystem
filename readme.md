@@ -14,6 +14,8 @@ Gerçek hayat senaryolarında bu bileşenlerden ApiGateway, Discovery Server ve 
 5. ***Accounting MicroService:*** Order mikro servisinin RestTemplate kullanarak senkron bir şekilde iletişim kurduğu servistir.</br></br>
 6. ***Notification MicroService:*** Order mikro servisinin cloud bus (çalışmada RabbitMQ kullanılmıştır) üzerinden asenkron bir şekilde iletişim kurduğu servistir. </br></br>
 
+Bileşenleri ayrı ayrı ya da Docker üzerinde çalıştırmak mümkündür. Her bir bileşen için gerekli dockerfile dosyaları ve ekosistemi ayağa kaldırmak için gerekli docker-compose dosyası da çalışmada yer almaktadır.
+
 ![plot](./resources/ecosystem.jpg)
 
 ***Yararlanılan Kaynaklar*** </br>
