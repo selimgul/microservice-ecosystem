@@ -12,9 +12,9 @@ spring:
         - CustomFilter
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:80}
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${DISCOVERY:http://localhost:10001/eureka/}
+      defaultZone: ${DISCOVERY:http://discovery-server/eureka/}

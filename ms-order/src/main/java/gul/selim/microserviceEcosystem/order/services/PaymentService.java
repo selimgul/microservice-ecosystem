@@ -31,7 +31,7 @@ public class PaymentService {
 
         NotifyRequest notifyRequestLoc = new NotifyRequest();
         notifyRequestLoc.setDest("1234567");
-        notifyRequestLoc.setMessage("Siparişini alındı sayın : " + order.getCustomerName());
+        notifyRequestLoc.setMessage("Siparişiniz alındı. Sayın: " + order.getCustomerName());
 
         System.out.println("Order Microservice: Sending sms-notify...");
         this.rabbit.convertAndSend("sms-notify-ex",

@@ -3,7 +3,7 @@ spring:
     name: order
   cloud:
     config:
-      uri: ${CONFIG:http://localhost:10002}
+      uri: ${CONFIG:http://config-server}
 
 server:
-  port: ${PORT:21001}
+  port: ${PORT:80}

@@ -8,4 +8,4 @@ spring:
           uri: https://github.com/selimgul/config-server.git
           search-paths: config
 server:
-  port: ${PORT:10002}
+  port: ${PORT:80}

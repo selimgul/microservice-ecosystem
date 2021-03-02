@@ -3,6 +3,6 @@ spring:
     name: notification
   cloud:
     config:
-      uri: ${CONFIG:http://localhost:10002}
+      uri: ${CONFIG:http://config-server}
 server:
-  port: ${PORT:23001}
+  port: ${PORT:80}

@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+WORKDIR /app
+COPY target/notification-1.0.0.jar .
+ENTRYPOINT [ "sh","-c","java -jar notification-1.0.0.jar" ]

@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+WORKDIR /app
+COPY target/apigateway-1.0.0.jar .
+ENTRYPOINT [ "sh","-c","java -jar apigateway-1.0.0.jar" ]

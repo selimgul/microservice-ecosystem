@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  microservice-ecosystem-ms-order:
+    image: microservice-ecosystem-ms-order:1.0
+    container_name: microservice-ecosystem-ms-order
+    ports:
+      - "21001:80"
+    environment:
+      - PORT=80
+    networks:
+      - microservice-ecosystem-network
+
+  microservice-ecosystem-ms-accounting:
+    image: microservice-ecosystem-ms-accounting:1.0
+    container_name: microservice-ecosystem-ms-accounting
+    environment:
+      - PORT=80
+    networks:
+      - microservice-ecosystem-network
+
+  microservice-ecosystem-ms-notification:
+    image: microservice-ecosystem-ms-notification:1.0
+    container_name: microservice-ecosystem-ms-notification
+    environment:
+      - PORT=80
+    networks:
+      - microservice-ecosystem-network
+
+networks:
+  microservice-ecosystem-network:
+    name: microservice-ecosystem-network

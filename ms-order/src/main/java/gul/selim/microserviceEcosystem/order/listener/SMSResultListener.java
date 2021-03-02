@@ -15,7 +15,7 @@ public class SMSResultListener {
                     key = "sms-notify-response"))
     public void handleNotifyMessage(final String responseParam) {
 
-        System.out.println("Order Microservice:Message received: " + responseParam);
+        System.out.println("Order Microservice: Message received: " + responseParam);
     }
 
 }
