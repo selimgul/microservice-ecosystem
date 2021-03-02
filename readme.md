@@ -21,8 +21,8 @@ Bileşenleri ayrı ayrı ya da Docker üzerinde çalıştırmak mümkündür. He
 İlk sıraya docker ile çalıştırmayı koyduğumuz için eğer IDE içinden ya da ayrı bir şekilde process olarak çalıştırılacak ise konfigurasyon dosyalarındaki PORT, CONFIG ve DISCOVERY gibi değişkenler olması gerekenler ile değiştirilmelidir. 
 Bu değerler environment variable ya da command line argument olarak verilebilir.</br>
 
-***./scripts/node/docker-compose.yml*** ile Discovery Server, Configuration Server ve API Gateway ve Cloud Bus (RabbitMQ) ayağa kaldırılıyor.</br>
-***./scripts/ms/docker-compose.yml*** ile Order, Accounting ve Notification mikro servisleri ayağa kaldırılıyor. </br>
+***./scripts/node/docker-compose.yml*** ile Discovery Server, Configuration Server ve API Gateway ve Cloud Bus (RabbitMQ) ayağa kaldırılır.</br>
+***./scripts/ms/docker-compose.yml*** ile Order, Accounting ve Notification mikro servisleri ayağa kaldırılır. </br>
 ***./scripts/docker-image-build.sh*** ile Docker imajları oluşturulur. Bunu yapmadan önce çalışan tüm container'lar ve imajlar da silinir.
 
 Tüm bileşenler ayağa kalktıktan sonra aşağıdaki şekilde istek gönderilebilir:
