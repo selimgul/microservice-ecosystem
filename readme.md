@@ -23,7 +23,7 @@ Bu değerler environment variable ya da command line argument olarak verilebilir
 
 ***./scripts/node/docker-compose.yml*** ile Discovery Server, Configuration Server ve API Gateway ve Cloud Bus (RabbitMQ) ayağa kaldırılıyor.</br>
 ***./scripts/ms/docker-compose.yml*** ile Order, Accounting ve Notification mikro servisleri ayağa kaldırılıyor. </br>
-***./scripts/docker-image-build.sh*** ile Docker imajları oluşturulur. Bunu yapmadan önce çalışan tüm container'lar ve imajlar da siliniyor.
+***./scripts/docker-image-build.sh*** ile Docker imajları oluşturulur. Bunu yapmadan önce çalışan tüm container'lar ve imajlar da silinir.
 
 Tüm bileşenler ayağa kalktıktan sonra aşağıdaki şekilde istek gönderilebilir:
 
