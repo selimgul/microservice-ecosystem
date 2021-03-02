@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      routes:
+      - id: OrderModule
+        uri: lb://order
+        predicates:
+        - Path=/order/**
+        filters:
+        - CustomFilter
+
+server:
+  port: ${PORT:10003}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server/eureka/

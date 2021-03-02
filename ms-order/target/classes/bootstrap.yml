@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      uri: ${CONFIG:http://config-server}
+
+server:
+  port: ${PORT:80}

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: notification
+  cloud:
+    config:
+      uri: ${CONFIG:http://config-server}
+server:
+  port: ${PORT:23001}
