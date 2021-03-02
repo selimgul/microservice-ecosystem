@@ -14,10 +14,34 @@ Gerçek hayat senaryolarında bu bileşenlerden ApiGateway, Discovery Server ve 
 5. ***Accounting MicroService:*** Order mikro servisinin RestTemplate kullanarak senkron bir şekilde iletişim kurduğu servistir.</br></br>
 6. ***Notification MicroService:*** Order mikro servisinin cloud bus (çalışmada RabbitMQ kullanılmıştır) üzerinden asenkron bir şekilde iletişim kurduğu servistir. </br></br>
 
-Bileşenleri ayrı ayrı ya da Docker üzerinde çalıştırmak mümkündür. Her bir bileşen için gerekli dockerfile dosyaları ve ekosistemi ayağa kaldırmak için gerekli docker-compose dosyası da çalışmada yer almaktadır.
-
 ![plot](./resources/ecosystem.jpg)
 
-***Yararlanılan Kaynaklar*** </br>
+
+Bileşenleri ayrı ayrı ya da Docker üzerinde çalıştırmak mümkündür. Her bir bileşen için gerekli dockerfile dosyaları ve ekosistemi ayağa kaldırmak için gerekli docker-compose dosyaları da çalışmada yer almaktadır.
+İlk sıraya docker ile çalıştırmayı koyduğumuz için eğer IDE içinden ya da ayrı bir şekilde process olarak çalıştırılacak ise konfigurasyon dosyalarındaki PORT, CONFIG ve DISCOVERY gibi değişkenler olması gerekenler ile değiştirilmelidir. 
+Bu değerler environment variable ya da command line argument olarak verilebilir.</br>
+
+***./scripts/node/docker-compose.yml*** ile Discovery Server, Configuration Server ve API Gateway ve Cloud Bus (RabbitMQ) ayağa kaldırılıyor.</br>
+***./scripts/ms/docker-compose.yml*** ile Order, Accounting ve Notification mikro servisleri ayağa kaldırılıyor. </br>
+***./scripts/docker-image-build.sh*** ile Docker imajları oluşturulur. Bunu yapmadan önce çalışan tüm container'lar ve imajlar da siliniyor.
+
+Tüm bileşenler ayağa kalktıktan sonra aşağıdaki şekilde istek gönderilebilir:
+
+![plot](./resources/postman.png)
+
+Node-APIGateway:
+![plot](./resources/node-apigateway.png)
+
+MS-Order:
+![plot](./resources/ms-order.png)
+
+MS-Accounting:
+![plot](./resources/ms-accounting.png)
+
+MS-Notification:
+![plot](./resources/ms-notification.png)
+
+***Kaynaklar*** </br>
 https://github.com/osmanyaycioglu </br>
 https://www.javainuse.com/spring/springcloud
+
