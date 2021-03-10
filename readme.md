@@ -25,6 +25,9 @@ Bu değerler environment variable ya da command line argument olarak verilebilir
 ***./scripts/ms/docker-compose.yml*** ile Order, Accounting ve Notification mikro servisleri ayağa kaldırılır. </br>
 ***./scripts/docker-image-build.sh*** ile Docker imajları oluşturulur. Bunu yapmadan önce çalışan tüm container'lar ve imajlar da silinir.
 
+Servisler çalışıyorken konfigurasyon dosyalarında değişiklik yapılırsa mikro servislerin bunu görmesi için Actuator üzerinden refresh komutu gönderilebilir.
+Eğer bir servisin .../actuator/refresh endpoint'ine post isteği gönderilirse sadece ilgili servisin değişikliği görmesi sağlanabilir. Eğer tüm mikro servislerin değişikliği görmesi isteniyorsa mikro servislerden herhangi birisinin .../actuator/busrefresh endpoint'ine post isteği gönderilebilir. İlgili tüm mikro servisler değişikliği cloud bus (bu örnek için RabbitMQ) üzerinden alacaklardır.
+
 Tüm bileşenler ayağa kalktıktan sonra aşağıdaki şekilde istek gönderilebilir:
 
 ![plot](./resources/postman.png)
