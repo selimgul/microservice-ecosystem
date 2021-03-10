@@ -14,6 +14,8 @@ services:
   microservice-ecosystem-ms-accounting:
     image: microservice-ecosystem-ms-accounting:1.0
     container_name: microservice-ecosystem-ms-accounting
+    ports:
+      - "22001:80"
     environment:
       - PORT=80
     networks:

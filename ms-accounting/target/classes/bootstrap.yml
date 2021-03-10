@@ -6,4 +6,4 @@ spring:
       uri: ${CONFIG:http://config-server}
 
 server:
-  port: ${PORT:22001}
+  port: ${PORT:80}

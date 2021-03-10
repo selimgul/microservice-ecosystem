@@ -1,0 +1,28 @@
+config-key: this-config-value-comes-from-application.yml
+
+eureka:
+  client:
+    serviceUrl: 
+      defaultZone: http://discovery-server/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+
+management:
+  endpoint:
+    health: 
+      show-details: "always"
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  rabbitmq:
+    host: microservice-ecosystem-rabbitmq
+    port: 5672
+    username: guest
+    password: guest
